@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+#confirmacao {
+	position: relative;
+	top: -50px;
+}
+
+input#nomeConvidado {
+	width: 500px;
+}
+
+form {
+  width: 600px;
+  margin: auto;
+}
+
+input, textarea {
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 13pt;
+  background-color: rgba(255,255,255,.8);
+}
+
+input:hover, textarea:hover {
+  background-color: #dddddd;
+}
+
+legend {
+  color: #888888;
+  font-size: 13pt;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+fieldset {
+  border-color: #cecece;
+  margin: 20px;
+}
+
+fieldset#resposta {
+  width: 150px;
+}
+
+fieldset#bloco-confirmacao {
+  background: url(../_imagens/aliancas.png) no-repeat 95% 95%;
+}
+
+#enviar {
+	position: relative;
+	left: 15px;
+}

@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+#mural-mensagens h1, h2{
+	text-align: center;
+	position: relative;
+	top: -60px;
+}
+
+#cNome, #cEmail{
+	width: 500px;
+	height: 40px;
+}
+

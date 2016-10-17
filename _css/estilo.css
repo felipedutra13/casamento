@@ -1,0 +1,118 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Alex+Brush');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Trirong');
+
+/*formatacao do cabecalho */
+div#cabecalho {
+	background: url(../_imagens/wedding.jpg) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	top:0px;
+	left:0px;
+	width: 100%;
+	height: 400px;
+	z-index: -1;
+}
+
+div#cabecalho h1 {
+	position: relative;
+	top: 220px;
+	text-align: center;
+	font-family: 'Alex Brush', cursive;
+	font-size: 40pt;
+	color: rgb(218, 165, 32);
+}
+
+div#cabecalho h2 {
+	position: relative;
+	top: 200px;
+	text-align: center;
+	font-family: 'Inconsolata', monospace;
+	color: white;
+}
+
+/*fim da formatacao do cabecalho */
+
+/*formatacao do menu */
+nav#menu {
+  display: block;
+  
+  
+}
+nav#menu ul {
+  background-color: #dddddd;
+}
+
+.posicao-menu {
+  position: absolute;
+  top: 384px;
+  left: 0px;
+  text-align: center;
+  width: 100%;
+}
+
+nav#menu li {
+  display: inline-block;
+  background-color: #dddddd;
+  padding: 10px;
+  margin: 0px -2px 0px -2px; 
+  transition: background-color 1s;
+  font-family: 'Dancing Script', cursive;
+  font-size: 20pt;
+}
+
+nav#menu li:hover {
+  background-color: #606060;
+}
+
+nav#menu a {
+  color: #000000;
+  text-decoration: none;
+}
+
+nav#menu li:hover a{
+  color: white;
+}
+
+.menu-fixo {
+	top: -20px;
+	z-index: 99;
+	position: fixed;
+}
+
+/*fim da formatacao do menu */
+
+#texto-principal {
+	font-family: 'Roboto', sans-serif;
+	--position: relative;
+	--top: 480px;
+	text-align: center;
+	width: 70%;
+	margin: auto;
+	color: rgb(66,66,111);
+}
+
+#teste {
+		position: relative;
+	top: 480px;
+}
+
+/*formatacçao das modulras */
+figure {
+	position: relative;
+	left: -40px;
+}
+
+figure h1 {
+	position: relative;
+	top: -90px;
+	left: 528px;
+	width: 500px;
+	color: rgb(168, 168, 168);
+	font-family: 'Trirong', serif;
+	font-size: 21pt;
+}
+/*fim da formatacao da moldura */

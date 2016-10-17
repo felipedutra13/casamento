@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+#localizacao {
+	width: 800px;
+	height: 500px;
+	top: -50px;
+	left: 300px;
+	position: relative;
+}
