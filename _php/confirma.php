@@ -1,4 +1,5 @@
 <?php
+	$redirect = "../home.php";
 	////Faz a conexão com o banco
 	$conecta = mysql_connect("127.0.0.1", "root", "") or print (mysql_error()); 
 	mysql_select_db("casamento", $conecta) or print(mysql_error()); 
@@ -19,5 +20,5 @@
 	///fecha a conexão
 	mysql_close($conecta); 
 	
-	echo "Obrigado pela confirmação!"
+	header("location:$redirect");
 ?>

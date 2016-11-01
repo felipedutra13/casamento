@@ -87,8 +87,6 @@ nav#menu li:hover a{
 
 #texto-principal {
 	font-family: 'Roboto', sans-serif;
-	--position: relative;
-	--top: 480px;
 	text-align: center;
 	width: 70%;
 	margin: auto;
@@ -96,8 +94,9 @@ nav#menu li:hover a{
 }
 
 #teste {
-		position: relative;
+	position: relative;
 	top: 480px;
+	width: 100%;
 }
 
 /*formatacçao das modulras */
@@ -116,3 +115,81 @@ figure h1 {
 	font-size: 21pt;
 }
 /*fim da formatacao da moldura */
+
+#lista-presentes {
+	margin-bottom: 70px;
+}
+
+#lista-presentes h1 {
+	left: 542px;
+}
+
+#albuns h1 {
+	left: 615px;
+}
+
+#lista-presentes a {
+	font-size: 20pt;
+	text-align: center;
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+}
+
+ /* unvisited link */
+a:link {
+	color: rgb(66,66,111);
+}
+
+/* visited link */
+a:visited {
+	color: rgb(66,66,111);
+}
+
+/* mouse over link */
+a:hover {
+    color: rgba(66,66,111, 0.5);
+}
+
+/* selected link */
+a:active {
+	color: rgb(66,66,111);
+} 
+
+#galeria {
+	position: relative;
+	width: 733px;
+	height: 550px;
+	left: 270px;
+}
+
+#seta-esquerda {
+	cursor: pointer;
+	padding: 10px;
+	width: 30px;
+	height: 40px;
+	position: relative;
+	left: 323px;
+	top: -250px;
+	z-index: 99;
+	background: rgba(66,66,66,0.2);
+}
+
+#seta-esquerda:hover {
+	opacity: 0.4;
+}
+
+#seta-direita {
+	cursor: pointer;
+	padding: 10px;
+	width: 30px;
+	height: 40px;
+	position: relative;
+	left: 217px;
+	top: -250px;
+	z-index: 99;
+	background: rgba(66,66,66,0.2);
+}
+
+#seta-direita:hover {
+	opacity: 0.4;
+}

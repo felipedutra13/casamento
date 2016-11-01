@@ -1,13 +1,112 @@
+<?php
+/**
+ * Sistema de contador de visitas
+ *
+ * Usado para fazer a contagem de visitas únicas e pageviews diários do site
+ *
+ * Método de utilização:
+ *  Apenas inclua este arquivo no começo do seu site.
+ */
+ //  Configurações do Script
+ // ==============================
+ $_CV['registraAuto'] = true;       // Registra as visitas automaticamente?
+ $_CV['conectaMySQL'] = true;       // Abre uma conexão com o servidor MySQL?
+ $_CV['iniciaSessao'] = true;       // Inicia a sessão com um session_start()?
+ $_CV['servidor'] = '127.0.0.1';    // Servidor MySQL
+ $_CV['usuario'] = 'root';          // Usuário MySQL
+ $_CV['senha'] = '';                // Senha MySQL
+ $_CV['banco'] = 'casamento';       // Banco de dados MySQL
+ $_CV['tabela'] = 'visitas';        // Nome da tabela onde os dados são salvos
+ // ==============================
+ // ======================================
+ //   ~ Não edite a partir deste ponto ~
+ // ======================================
+ // Verifica se precisa fazer a conexão com o MySQL
+ if ($_CV['conectaMySQL'] == true) {
+    $_CV['link'] = mysql_connect($_CV['servidor'], $_CV['usuario'], $_CV['senha']) or die("MySQL: Não foi possível conectar-se ao servidor [".$_CV['servidor']."].");
+    mysql_select_db($_CV['banco'], $_CV['link']) or die("MySQL: Não foi possível conectar-se ao banco de dados [".$_CV['banco']."].");
+ }
+ // Verifica se precisa iniciar a sessão
+ if ($_CV['iniciaSessao'] == true) {
+    session_start();
+ }
+/**
+ * Registra uma visita e/ou pageview para o visitante
+ */
+ function registraVisita() {
+    global $_CV;
+    $sql = "SELECT COUNT(*) FROM `".$_CV['tabela']."` WHERE `data` = CURDATE()";
+    $query = mysql_query($sql);
+    $resultado = mysql_fetch_row($query);
+    // Verifica se é uma visita (do visitante)
+    $nova = (!isset($_SESSION['ContadorVisitas'])) ? true : false;
+    // Verifica se já existe registro para o dia
+    if ($resultado[0] == 0) {
+        $sql = "INSERT INTO `".$_CV['tabela']."` VALUES (NULL, CURDATE(), 1, 1)";
+    } else {
+        if ($nova == true) {
+            $sql = "UPDATE `".$_CV['tabela']."` SET `uniques` = (`uniques` + 1), `pageviews` = (`pageviews` + 1) WHERE `data` = CURDATE()";
+        } else {
+            $sql = "UPDATE `".$_CV['tabela']."` SET `pageviews` = (`pageviews` + 1) WHERE `data` = CURDATE()";
+        }
+    }
+    // Registra a visita
+    mysql_query($sql);
+    // Cria uma variavel na sessão
+    $_SESSION['ContadorVisitas'] = md5(time());
+ }
+/**
+ * Função que retorna o total de visitas
+ *
+ * @param string $tipo - O tipo de visitas a se pegar: (uniques|pageviews)
+ * @param string $periodo - O período das visitas: (hoje|mes|ano)
+ *
+ * @return int - Total de visitas do tipo no período
+ */
+ function pegaVisitas($tipo = 'uniques', $periodo = 'hoje') {
+    global $_CV;
+    switch($tipo) {
+        default:
+        case 'uniques':
+            $campo = 'uniques';
+            break;
+        case 'pageviews':
+            $campo = 'pageviews';
+            break;
+    }
+    switch($periodo) {
+        default:
+        case 'hoje':
+            $busca = "`data` = CURDATE()";
+            break;
+        case 'mes':
+            $busca = "`data` BETWEEN DATE_FORMAT(CURDATE(), '%Y-%m-01') AND LAST_DAY(CURDATE())";
+            break;
+        case 'ano':
+            $busca = "`data` BETWEEN DATE_FORMAT(CURDATE(), '%Y-01-01') AND DATE_FORMAT(CURDATE(), '%Y-12-31')";
+            break;
+    }
+    // Faz a consulta no MySQL em função dos argumentos
+    $sql = "SELECT SUM(`".$campo."`) FROM `".$_CV['tabela']."` WHERE ".$busca;
+    $query = mysql_query($sql);
+    $resultado = mysql_fetch_row($query);
+    // Retorna o valor encontrado ou zero
+    return (!empty($resultado)) ? (int)$resultado[0] : 0;
+ }
+ if ($_CV['registraAuto'] == true) { registraVisita(); }
+?>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8"/>
 		<title>Letícia e Breno</title>
 		<link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
-		<link rel="stylesheet" type="text/css" href="_css/confirmacao.css"/>
 		<link rel="stylesheet" type="text/css" href="_css/festa.css"/>
 		<link rel="stylesheet" type="text/css" href="_css/mural.css"/>
+		<link rel="stylesheet" type="text/css" href="_css/rodape.css"/>
+		<link rel="stylesheet" type="text/css" href="_css/audio.css"/>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+		<script src="jquery.countdown-2.2.0/jquery.countdown.js"></script>
 		<script src="_javascript/funcoes.js"></script>
 	</head>
 	<body>
@@ -18,12 +117,12 @@
 		
 		<nav id="menu" class="posicao-menu">
 			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Confirmação de Presença</a></li>
-				<li><a href="#">Lista de Presentes</a></li>
-				<li><a href="#">Festa</a></li>
-				<li><a href="#">Álbum</a></li>
-				<li><a href="#">...</a></li>
+				<li><a href="home.php">Home</a></li>
+				<li><a href="presenca.php">Confirmação de Presença</a></li>
+				<li><a href="presentes.php">Lista de Presentes</a></li>
+				<li><a href="mensagens.php">Mural de Mensagens</a></li>
+				<li><a href="festa.php">Festa</a></li>
+				<li><a href="fotos.php">Álbum</a></li>
 			</ul>
 		</nav>
 		
@@ -42,79 +141,18 @@
 			
 		</div>
 		
-		<figure>
-			<img src="_imagens/moldura.png"/>
-			<figcaption>
-				<h1>Confirmar Presença</h1>
-			</figcaption>
-		</figure>
-		
-			<form id="confirmacao">
-				<fieldset id="bloco-confirmacao">
-				<legend>Identificação do Usuário</legend>
-				
-				<input type="text" id="nomeConvidado" name="nomeConvidado" placeholder="Nome Completo do Convidado"/>
-				<fieldset id="resposta">Você irá ao evento?
-					<p><label name="tSimLabel" id="cSimLabel" for="cSim">Sim</label><input type="radio" name="tResposta" id="cSim" checked></p>
-					<p><label name="tNaoLabel" id="cNaoLabel" for="cNao">Não</label><input type="radio" name="tResposta" id="cNao"/></p>
-				</fieldset>
-				<p><label name="tQntLabel" id="cQntLabel" for="cQnt">Quantos adultos?</label><input type="number" name="tQnt" id="cQnt" min="1" max="10" value="1"/></label></p></p>
-				<input type="text" id="email" name="email" placeholder="E-mail"/>
-				<input type="text" id="ddd" name="ddd" placeholder="DDD"/>
-				<input type="text" id="telefone" name="telefone" placeholder="Telefone"/>
-				</fieldset>
-				<input id="enviar" type="submit" value="Enviar Dados"/>
-			</form>
-			
-		<figure>
-			<img src="_imagens/moldura.png"/>
-			<figcaption>
-				<h1>Localização da Festa</h1>
-			</figcaption>
-		</figure>
-		
-			<section id="corpo">
-				<iframe id="localizacao" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3212.5829342839365!2d-42.65378917619719!3d-21.520783723979374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x62fdcfac18b144a0!2sSposato!5e0!3m2!1spt-BR!2sbr!4v1473878382738" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
-			</section>
-		
-		<figure>
-			<img src="_imagens/moldura.png"/>
-			<figcaption>
-				<h1>Mural de Mensagens</h1>
-			</figcaption>
-		</figure>
-		
-		<div id="mural-mensagens">
-			<h1>Deixe sua mensagem de carinho para nós...</h1>
-			<h2>Palavras são carinhos doados. Obrigado por nos dar o seu carinho. Iremos lembrar para sempre deste momento tão esperado.</h2>
-			
-			<form method="post" action="_php/mensagem.php">
-				<input type="text" id="cNome" name="tNome" placeholder="Nome"/></br></br>
-				<input type="text" id="cEmail" name="tEmail" placeholder="Email"/></br></br>
-				<textarea cols="59" rows="10" id="cMensagem" name="tMensagem" placeholder="Mensagem"></textarea></br>
-				<input type="submit" value="Enviar Mensagem"/>
-			</form>
-			
-			<?php 
-				////Faz a conexão com o banco
-				$conecta = mysql_connect("127.0.0.1", "root", "") or print (mysql_error()); 
-				mysql_select_db("casamento", $conecta) or print(mysql_error()); 
-				///////////////////////////////
-				
-				/////Le as mensagens do banco
-				$sql = "SELECT `nome`, `mensagem` FROM `mensagens`"; 
-				$result = mysql_query($sql, $conecta); 
-				 
-				/* Escreve resultados até que não haja mais linhas na tabela */ 
-				 
-				while($consulta = mysql_fetch_array($result)) { 
-				   echo "Nome: $consulta[nome] </br>Mensagem: $consulta[mensagem]<br>"; 
-				} 
-				////////////////////////////
+		<footer id="rodape">
+			<div><p>Faltam <span id="dias">clock</span> dias</p></div>
+			<?php
+				 // Pega o total de pageviews desde o começo do ano
+				$total = pegaVisitas('uniques', 'ano');
+				echo "<p>$total Pessoas estiveram aqui</p>";
 			?>
-		</div>
-			
-		</div>
+		</footer>
 		
+          <audio id="musica" controls="controls">
+            <source src="_songs/beirut.mp3" type="audio/mpeg"/>
+          </audio>
+		</div>	
 	</body>
 </html>
