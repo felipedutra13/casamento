@@ -86,11 +86,21 @@ nav#menu li:hover a{
 /*fim da formatacao do menu */
 
 #texto-principal {
-	font-family: 'Roboto', sans-serif;
+	--font-family: 'Roboto', sans-serif;
+	font-family: 'Times New Roman';
 	text-align: center;
 	width: 70%;
 	margin: auto;
 	color: rgb(66,66,111);
+}
+
+#texto-principal h1 {
+	font-weight: bold;
+	font-style: italic;
+}
+
+#texto-principal p{
+	font-style: italic;
 }
 
 #teste {
@@ -192,4 +202,58 @@ a:active {
 
 #seta-direita:hover {
 	opacity: 0.4;
+}
+
+#lista-presentes h2 {
+	text-align:center;
+	color: rgb(66,66,111);
+}
+
+#lojas-virtuais {
+	position: relative;
+	width: 500px;
+	height: 200px;
+	left: 50px;
+	border: black 1px solid;
+	padding: 10px;
+	box-shadow: 2px 6px 20px 0px rgba(0,0,0,1);
+	margin: 10px;
+	text-align: center;
+}
+
+#lojas-virtuais img {
+	height: 50px;
+	width: 50px;
+	position:absolute;
+	left:50%;
+	margin-left:-25px;
+}
+
+#lojas-virtuais h2 {
+	margin-top: 40px;
+}
+
+#lojas-fisicas {
+	position: absolute;
+	left: 700px;
+	top: 250px;
+	width: 500px;
+	height: 200px;
+	border: black 1px solid;
+	padding: 10px;
+	box-shadow: 2px 6px 20px 0px rgba(0,0,0,1);
+	margin: 10px;
+	text-align: center;
+}
+
+#lojas-fisicas img {
+	height: 50px;
+	width: 50px;
+	position:absolute;
+	left:50%;
+	margin-left:-25px;
+}
+
+#lojas-fisicas h2 {
+	margin-top: 45px;
 }

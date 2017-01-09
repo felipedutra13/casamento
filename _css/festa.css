@@ -7,3 +7,8 @@
 	left: 300px;
 	position: relative;
 }
+
+h2 {
+	text-align:center;
+	color: rgb(66,66,111);
+}

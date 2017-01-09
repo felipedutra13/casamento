@@ -103,6 +103,7 @@
 		<link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
 		<link rel="stylesheet" type="text/css" href="_css/rodape.css"/>
 		<link rel="stylesheet" type="text/css" href="_css/audio.css"/>
+		<link rel="shortcut icon" href="_imagens/icone.png"/>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
 		<script src="jquery.countdown-2.2.0/jquery.countdown.js"></script>
 		<script src="_javascript/funcoes.js"></script>
@@ -121,23 +122,11 @@
 				<li><a href="mensagens.php">Mural de Mensagens</a></li>
 				<li><a href="festa.php">Festa</a></li>
 				<li><a href="fotos.php">Álbum</a></li>
+				<li><a href="dicas.php">Dicas</a></li>
 			</ul>
 		</nav>
 		
 		<div id="teste">
-		<div id="texto-principal">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices lectus sit amet augue condimentum, at dignissim tortor porta. Fusce et libero fringilla, faucibus elit sed, tempor ex. Morbi bibendum eleifend libero ac dictum. Aenean ornare varius accumsan. Nam vitae sapien elementum, faucibus augue sed, efficitur neque. Proin aliquam lectus in sem euismod tincidunt. Fusce egestas sodales purus, quis tincidunt dolor sodales in. Quisque id cursus lacus. Nulla at feugiat magna.</p>
-
-			<p>Nunc accumsan nisl vehicula, gravida diam eu, iaculis leo. Mauris eu dictum dolor, in ultrices elit. Sed ipsum ligula, elementum a fringilla eget, volutpat eget nisl. Morbi finibus, lacus non dapibus convallis, leo ante dictum libero, ullamcorper pulvinar elit dolor hendrerit enim. Ut vulputate dapibus urna eget suscipit. Donec nec nunc augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu velit leo. Nunc eu sagittis turpis. Curabitur id metus vestibulum, porttitor ligula at, malesuada diam. Quisque sed commodo erat. In id ipsum justo. Nunc quis risus in enim dignissim eleifend.</p>
-
-			<p>Praesent eget risus dictum, hendrerit velit facilisis, pulvinar nisl. Vestibulum varius, felis ac faucibus dapibus, nunc velit pulvinar nunc, ac iaculis dui ante vel nulla. Praesent dapibus mauris vel ante congue dignissim. Sed interdum quam a urna vulputate gravida. Nullam eget quam consequat, ornare purus quis, aliquet metus. Fusce non libero non velit maximus viverra sit amet sit amet magna. Sed non ante gravida, consectetur quam faucibus, elementum odio. Vivamus mattis blandit urna, eu commodo arcu. Curabitur sed mattis tellus. Curabitur aliquet justo non efficitur elementum. Donec ut libero quis magna rutrum porta ac sed odio. Nunc vitae ullamcorper tortor, et vestibulum quam. Cras commodo mauris a dolor luctus, non imperdiet neque molestie. Praesent mattis posuere porta.</p>
-
-			<p>Fusce et dignissim mi. In aliquam arcu a efficitur feugiat. Ut a molestie dui. Sed auctor, urna quis feugiat elementum, tortor lectus cursus mi, nec molestie nisl ante sit amet ligula. Suspendisse tempus euismod fringilla. Curabitur elit ipsum, laoreet quis tincidunt quis, iaculis in magna. Proin quis bibendum est. Sed euismod eros eget nulla hendrerit tristique. Integer efficitur felis sed odio varius, ut dictum mauris malesuada. Maecenas et auctor nulla. Nulla hendrerit lectus sapien, posuere elementum elit tempor id. Sed ultrices lectus eu sapien pharetra, nec dictum velit egestas. Nulla sit amet nibh enim.</p>
-
-			<p>Ut felis elit, ullamcorper at dolor eget, cursus efficitur sapien. Etiam sit amet molestie felis. Ut nec finibus diam. Ut vel massa sapien. Aenean nec diam varius, suscipit nisl nec, congue lorem. In hac habitasse platea dictumst. Vestibulum nec luctus metus, sed tempus arcu. Nullam imperdiet facilisis dui in eleifend. Morbi non ligula ipsum. Praesent justo nibh, posuere nec rhoncus eu, tincidunt imperdiet felis. Nunc finibus urna in ipsum pellentesque, vel placerat metus luctus. Sed lacinia facilisis purus, non feugiat diam mattis quis. Aliquam erat volutpat. Nulla mauris eros, consectetur sed magna mollis, efficitur aliquet libero. Aenean vel ultricies mi, quis imperdiet augue. 
-			</p>
-			
-		</div>
 		
 		<div id="albuns">
 			<figure>
