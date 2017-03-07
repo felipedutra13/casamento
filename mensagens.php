@@ -121,7 +121,7 @@
 				<li><a href="presenca.php">Confirmação de Presença</a></li>
 				<li><a href="presentes.php">Lista de Presentes</a></li>
 				<li><a href="mensagens.php">Mural de Mensagens</a></li>
-				<li><a href="festa.php">Festa</a></li>
+				<li><a href="festa.php">Cerimônia</a></li>
 				<li><a href="fotos.php">Álbum</a></li>
 				<li><a href="dicas.php">Dicas</a></li>
 			</ul>

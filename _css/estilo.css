@@ -91,7 +91,11 @@ nav#menu li:hover a{
 	text-align: center;
 	width: 70%;
 	margin: auto;
-	color: rgb(66,66,111);
+	color: rgb(205,110,129);
+}
+
+#texto-principal h2 {
+	color: rgb(205,110,129);
 }
 
 #texto-principal h1 {
@@ -120,7 +124,7 @@ figure h1 {
 	top: -90px;
 	left: 528px;
 	width: 500px;
-	color: rgb(168, 168, 168);
+	color: rgb(205, 127, 50);
 	font-family: 'Trirong', serif;
 	font-size: 21pt;
 }
@@ -147,12 +151,12 @@ figure h1 {
 
  /* unvisited link */
 a:link {
-	color: rgb(66,66,111);
+	color: rgb(205,110,129);
 }
 
 /* visited link */
 a:visited {
-	color: rgb(66,66,111);
+	color: rgb(205,110,129);
 }
 
 /* mouse over link */
@@ -162,7 +166,7 @@ a:hover {
 
 /* selected link */
 a:active {
-	color: rgb(66,66,111);
+	color: rgb(205,110,129);
 } 
 
 #galeria {
@@ -206,7 +210,7 @@ a:active {
 
 #lista-presentes h2 {
 	text-align:center;
-	color: rgb(66,66,111);
+	color: rgb(205,110,129);
 }
 
 #lojas-virtuais {

@@ -121,7 +121,7 @@
 				<li><a href="presenca.php">Confirmação de Presença</a></li>
 				<li><a href="presentes.php">Lista de Presentes</a></li>
 				<li><a href="mensagens.php">Mural de Mensagens</a></li>
-				<li><a href="festa.php">Festa</a></li>
+				<li><a href="festa.php">Cerimônia</a></li>
 				<li><a href="fotos.php">Álbum</a></li>
 				<li><a href="dicas.php">Dicas</a></li>
 			</ul>
@@ -132,12 +132,11 @@
 		<figure>
 			<img src="_imagens/moldura.png"/>
 			<figcaption>
-				<h1>Localização da Festa</h1>
+				<h1>&nbsp;Local da Cerimônia</h1>
 			</figcaption>
 		</figure>
 		
-		<h2>Nos encontramos dia 17 de Junho de 2017, às 16:15h no Sposato festas – Leopoldina/MG.</br>
-			Endereço:  </br></br></br>
+		<h2>Nos encontramos dia 17 de Junho de 2017, às 16:15h no Sposato festas – Leopoldina/MG.</br></br></br>
 		</h2>
 		
 			<section id="corpo">

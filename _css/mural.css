@@ -17,7 +17,7 @@ form {
 
 .mensagem  h1{
 	font-family: 'Roboto', sans-serif;
-	color: rgb(66,66,111);
+	color: rgb(205,110,129);
 }
 
 .mensagem  h2{
@@ -28,12 +28,12 @@ form {
 
 #mural-mensagens > h1 {
 	text-align:center;
-	color: rgb(66,66,111);
+	color: rgb(205,110,129);
 }
 
 #mural-mensagens > h2 {
 	text-align:center;
-	color: rgb(66,66,111);
+	color: rgb(205,110,129);
 }
 #cNome, #cEmail{
 	width: 500px;

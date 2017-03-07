@@ -123,7 +123,7 @@
 				<li><a href="presenca.php">Confirmação de Presença</a></li>
 				<li><a href="presentes.php">Lista de Presentes</a></li>
 				<li><a href="mensagens.php">Mural de Mensagens</a></li>
-				<li><a href="festa.php">Festa</a></li>
+				<li><a href="festa.php">Cerimônia</a></li>
 				<li><a href="fotos.php">Álbum</a></li>
 				<li><a href="dicas.php">Dicas</a></li>
 			</ul>
@@ -142,20 +142,20 @@
 			<h2>Faça parte da nossa história de amor, confirme sua presença.</h2>
 		</div>
 		
-			<form id="confirmacao" method="post" action="_php/confirma.php">
+			<form id="confirmacao" method="post" action="_php/confirma.php" onsubmit="confirmarPresenca()">
 				<fieldset id="bloco-confirmacao">
 				<legend>Identificação do Usuário</legend>
 				
-				<input type="text" id="nomeConvidado" name="nomeConvidado" placeholder="Nome Completo do Convidado"/>
+				<input type="text" id="nomeConvidado" name="nomeConvidado" placeholder="Nome Completo do Convidado" required/>
 				<fieldset id="resposta">Você irá ao evento?
 					<p><label name="tSimLabel" id="cSimLabel" for="cSim">Sim</label><input type="radio" name="tResposta" value="Sim" id="cSim" checked></p>
 					<p><label name="tNaoLabel" id="cNaoLabel" for="cNao">Não</label><input type="radio" name="tResposta" value="Nao" id="cNao"/></p>
 				</fieldset>
 				<p><label name="tQntLabel" id="cQntLabel" for="cQnt">Quantos adultos? </label><input type="number" name="tQnt" id="cQnt" min="1" max="10" value="1"/></label></p></p>
-				<input type="text" id="email" name="email" placeholder="E-mail"/>
-				<input type="text" id="telefone" name="telefone" placeholder="Telefone" class="telefone"/>
+				<input type="text" id="email" name="email" placeholder="E-mail" required/>
+				<input type="text" id="telefone" name="telefone" placeholder="Telefone" class="telefone" required/>
 				</fieldset>
-				<input id="enviar" type="submit" value="Enviar Dados" onclick="confirmarPresenca()"/>
+				<input id="enviar" type="submit" value="Enviar Dados"/>
 			</form>
 		
 		<footer id="rodape">

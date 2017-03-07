@@ -105,6 +105,7 @@
 		<link rel="stylesheet" type="text/css" href="_css/mural.css"/>
 		<link rel="stylesheet" type="text/css" href="_css/rodape.css"/>
 		<link rel="stylesheet" type="text/css" href="_css/audio.css"/>
+		<link rel="stylesheet" type="text/css" href="_css/dicas.css"/>
 		<link rel="shortcut icon" href="_imagens/icone.png"/>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
 		<script src="jquery.countdown-2.2.0/jquery.countdown.js"></script>
@@ -122,7 +123,7 @@
 				<li><a href="presenca.php">Confirmação de Presença</a></li>
 				<li><a href="presentes.php">Lista de Presentes</a></li>
 				<li><a href="mensagens.php">Mural de Mensagens</a></li>
-				<li><a href="festa.php">Festa</a></li>
+				<li><a href="festa.php">Cerimônia</a></li>
 				<li><a href="fotos.php">Álbum</a></li>
 				<li><a href="dicas.php">Dicas</a></li>
 			</ul>
@@ -133,26 +134,22 @@
 			<h1>Sugestões de Hospedagem!</h1>
 			<h2>Separamos algumas opções para ajudar vocês, nossos queridos convidados, a se prepararem para o Grande Dia.</h2>
 
-			<p>Hotel Minas Tower</br>
-			Endereço: Av. Getúlio Vargas, 215 - Centro, Leopoldina - MG, 36700-000</br>
+			<p><span class="hotel">Hotel Minas Tower</span></br>
 			Telefone: (32) 3401-5000</br>
 			www.hotelminastower.com.br</p>
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3711.288361414646!2d-42.63965391861902!3d-21.535577136086204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa2c951f7da06cd%3A0xc091fec01c0352e9!2sHotel+Minas+Tower!5e0!3m2!1spt-BR!2sbr!4v1483975457844" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe></br>
 
-			<p>Hotel Ritson</br>
-			Endereço: R. Pres. Carlos Luz, 328 - Centro, Leopoldina - MG, 36700-000</br>
+			<p><span class="hotel">Hotel Ritz</span></br>
 			Telefone: (32) 3441-4141</br>
 			www.leopoldinaritzhotel.com.br</p>
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3711.426291924115!2d-42.64016681306175!3d-21.530180510633393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa2ceb34c56907b%3A0xd12a4ff0757ef15b!2sLeopoldina+Ritz+Hotel!5e0!3m2!1spt-BR!2sbr!4v1483975531937" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe></br>
 
-			<p>Hotel Alvorada</br>
-			Endereço: R. Presidente Carlos Luz, 44 - Centro, Leopoldina - MG, 36700-000</br>
+			<p><span class="hotel">Hotel Alvorada</span></br>
 			Telefone: (32) 3441-4231</br>
 			www.facebook.com/hotelalvoradaleopoldina/info</p>
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3711.352495246291!2d-42.63807883396328!3d-21.53306801632767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa2c95325403479%3A0x5850ae32d8be29ec!2sHotel+Alvorada!5e0!3m2!1spt-BR!2sbr!4v1483975568060" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe></br>
 
-			<p>Hotel Palace</br>
-			Endereço: R. Dr. Custódio Junqueira - Centro, Leopoldina - MG, 36700-000</br>
+			<p><span class="hotel">Hotel Palace</span></br>
 			Telefone: (32) 3441-1321</p>
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3711.3657018924496!2d-42.641689185553204!3d-21.532551295689828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa2c94d67558305%3A0x1a2861a87fb7b746!2sPalace+Hotel!5e0!3m2!1spt-BR!2sbr!4v1483975602047" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe></br>
 
