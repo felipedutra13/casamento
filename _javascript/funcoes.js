@@ -89,3 +89,9 @@ function confirmarPresenca() {
 	alert("Obrigado pela Confirmação!");
 }
 /////////////////
+
+////confirmacao de presenca
+function confirmarMensagem() {
+	alert("Obrigado pela Mensagem!");
+}
+/////////////////

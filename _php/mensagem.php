@@ -1,8 +1,8 @@
 <?php
-	$redirect = "../home.php";
+	$redirect = "../mensagens.php";
 	////Faz a conexão com o banco
-	$conecta = mysql_connect("127.0.0.1", "root", "") or print (mysql_error()); 
-	mysql_select_db("casamento", $conecta) or print(mysql_error()); 
+	$conecta = mysql_connect("mysql.weblink.com.br", "u348797896_fdias", "130392") or print (mysql_error()); 
+	mysql_select_db("u348797896_casam", $conecta) or print(mysql_error());
 	///////////////////////////////
 	
 	////Pega os dados do formulário
@@ -13,7 +13,7 @@
 	echo "nome: $nome</br>email: $email</br>Mensagem: $mensagem</br>";
 	
 	////escreve a query
-	$query = "INSERT INTO `mensagens2` VALUES('$nome','$email','$mensagem', CURRENT_DATE);"; 
+	$query = "INSERT INTO `mensagens` VALUES('$nome','$email','$mensagem', CURRENT_DATE);"; 
 	////executa a query no banco
 	$result = mysql_query($query, $conecta); 
 	///fecha a conexão

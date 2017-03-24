@@ -12,10 +12,10 @@
  $_CV['registraAuto'] = true;       // Registra as visitas automaticamente?
  $_CV['conectaMySQL'] = true;       // Abre uma conexão com o servidor MySQL?
  $_CV['iniciaSessao'] = true;       // Inicia a sessão com um session_start()?
- $_CV['servidor'] = '127.0.0.1';    // Servidor MySQL
- $_CV['usuario'] = 'root';          // Usuário MySQL
- $_CV['senha'] = '';                // Senha MySQL
- $_CV['banco'] = 'casamento';       // Banco de dados MySQL
+ $_CV['servidor'] = 'mysql.weblink.com.br';    // Servidor MySQL
+ $_CV['usuario'] = 'u348797896_fdias';          // UsuÃ¡rio MySQL
+ $_CV['senha'] = '130392';                // Senha MySQL
+ $_CV['banco'] = 'u348797896_casam';       // Banco de dados MySQL
  $_CV['tabela'] = 'visitas';        // Nome da tabela onde os dados são salvos
  // ==============================
  // ======================================
@@ -101,6 +101,7 @@
 		<meta charset="utf-8"/>
 		<title>Letícia e Breno</title>
 		<link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+		<link rel="stylesheet" type="text/css" href="_css/festa.css"/>
 		<link rel="stylesheet" type="text/css" href="_css/mural.css"/>
 		<link rel="stylesheet" type="text/css" href="_css/rodape.css"/>
 		<link rel="stylesheet" type="text/css" href="_css/audio.css"/>
@@ -117,7 +118,7 @@
 		
 		<nav id="menu" class="posicao-menu">
 			<ul>
-				<li><a href="home.php">Home</a></li>
+				<li><a href="http://leticiaebreno.com">Home</a></li>
 				<li><a href="presenca.php">Confirmação de Presença</a></li>
 				<li><a href="presentes.php">Lista de Presentes</a></li>
 				<li><a href="mensagens.php">Mural de Mensagens</a></li>
@@ -128,48 +129,20 @@
 		</nav>
 		
 		<div id="teste">
-		
-		<figure>
-			<img src="_imagens/moldura.png"/>
-			<figcaption>
-				<h1>Mural de Mensagens</h1>
-			</figcaption>
-		</figure>
-		
-		<div id="mural-mensagens">
-			<h1>Deixe sua mensagem de carinho para nós...</h1>
-			<h2>Palavras são carinhos doados. Obrigado por nos dar o seu carinho.</br>Iremos lembrar para sempre deste momento tão esperado.</h2>
-			
-			<form method="post" action="_php/mensagem.php" onsubmit="confirmarPresenca()>
-				<input type="text" id="cNome" name="tNome" placeholder="Nome"/></br></br>
-				<input type="text" id="cEmail" name="tEmail" placeholder="Email"/></br></br>
-				<textarea cols="59" rows="10" id="cMensagem" name="tMensagem" placeholder="Mensagem"></textarea></br>
-				<input type="submit" value="Enviar Mensagem"/>
-			</form>
+		<div id="texto-principal">
+			<h1>Sejam bem-vindos ao nosso site! ♥</h1>
 
-			<?php 
-				////Faz a conexão com o banco
-				$conecta = mysql_connect("127.0.0.1", "root", "") or print (mysql_error()); 
-				mysql_select_db("casamento", $conecta) or print(mysql_error());  
-				///////////////////////////////
-				
-				/////Le as mensagens do banco
-				$sql = "SELECT `nome`, `mensagem`, `data` FROM `mensagens2`"; 
-				$result = mysql_query($sql, $conecta); 
-				 
-				/* Escreve resultados até que não haja mais linhas na tabela */ 
-				 
-				while($consulta = mysql_fetch_array($result)) { 
-				   echo "<div class=\"mensagem\">
-							<h1>$consulta[nome]</h1>
-							<h2>$consulta[data]</h2>
-							<p>$consulta[mensagem] </p>
-						</div>";
-				} 
-				////////////////////////////
-			?>
+			<h2>O dia mais esperado das nossas vidas está chegando e tem sido um prazer compartilhar nossas emoções com vocês!</h2>
+
+			<p>Como muitos de vocês sabem, a contagem regressiva começou a cerca de 9 anos atrás! E agora, o grande dia está chegando!</p>
+			<p>Criamos esse site para compartilhar com vocês os detalhes da organização do nosso casamento.</p>
+			<p>Somos muito gratos a Deus pela oportunidade de poder compartilhar com vocês a nossa felicidade!</p>
+			<p>Não esqueça de confirmar sua presença!</p>
+			<p>Aguardamos vocês no nosso grande dia!</p>
+			<p>Letícia e Breno</p>
+
+			
 		</div>
-		
 		
 		<footer id="rodape">
 			<div><p>Faltam <span id="dias">clock</span> dias</p></div>

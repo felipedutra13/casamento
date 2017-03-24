@@ -12,10 +12,10 @@
  $_CV['registraAuto'] = true;       // Registra as visitas automaticamente?
  $_CV['conectaMySQL'] = true;       // Abre uma conexão com o servidor MySQL?
  $_CV['iniciaSessao'] = true;       // Inicia a sessão com um session_start()?
- $_CV['servidor'] = '127.0.0.1';    // Servidor MySQL
- $_CV['usuario'] = 'root';          // Usuário MySQL
- $_CV['senha'] = '';                // Senha MySQL
- $_CV['banco'] = 'casamento';       // Banco de dados MySQL
+ $_CV['servidor'] = 'mysql.weblink.com.br';    // Servidor MySQL
+ $_CV['usuario'] = 'u348797896_fdias';          // UsuÃ¡rio MySQL
+ $_CV['senha'] = '130392';                // Senha MySQL
+ $_CV['banco'] = 'u348797896_casam';       // Banco de dados MySQL
  $_CV['tabela'] = 'visitas';        // Nome da tabela onde os dados são salvos
  // ==============================
  // ======================================
@@ -101,11 +101,13 @@
 		<meta charset="utf-8"/>
 		<title>Letícia e Breno</title>
 		<link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
-		<link rel="stylesheet" type="text/css" href="_css/mural.css"/>
+		<link rel="stylesheet" type="text/css" href="_css/confirmacao.css"/>
 		<link rel="stylesheet" type="text/css" href="_css/rodape.css"/>
 		<link rel="stylesheet" type="text/css" href="_css/audio.css"/>
 		<link rel="shortcut icon" href="_imagens/icone.png"/>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="http://digitalbush.com/wp-content/uploads/2014/10/jquery.maskedinput.js"></script>
 		<script src="jquery.countdown-2.2.0/jquery.countdown.js"></script>
 		<script src="_javascript/funcoes.js"></script>
 	</head>
@@ -117,7 +119,7 @@
 		
 		<nav id="menu" class="posicao-menu">
 			<ul>
-				<li><a href="home.php">Home</a></li>
+				<li><a href="http://leticiaebreno.com">Home</a></li>
 				<li><a href="presenca.php">Confirmação de Presença</a></li>
 				<li><a href="presentes.php">Lista de Presentes</a></li>
 				<li><a href="mensagens.php">Mural de Mensagens</a></li>
@@ -132,44 +134,29 @@
 		<figure>
 			<img src="_imagens/moldura.png"/>
 			<figcaption>
-				<h1>Mural de Mensagens</h1>
+				<h1>Confirmar Presença</h1>
 			</figcaption>
 		</figure>
 		
-		<div id="mural-mensagens">
-			<h1>Deixe sua mensagem de carinho para nós...</h1>
-			<h2>Palavras são carinhos doados. Obrigado por nos dar o seu carinho.</br>Iremos lembrar para sempre deste momento tão esperado.</h2>
-			
-			<form method="post" action="_php/mensagem.php" onsubmit="confirmarPresenca()>
-				<input type="text" id="cNome" name="tNome" placeholder="Nome"/></br></br>
-				<input type="text" id="cEmail" name="tEmail" placeholder="Email"/></br></br>
-				<textarea cols="59" rows="10" id="cMensagem" name="tMensagem" placeholder="Mensagem"></textarea></br>
-				<input type="submit" value="Enviar Mensagem"/>
-			</form>
-
-			<?php 
-				////Faz a conexão com o banco
-				$conecta = mysql_connect("127.0.0.1", "root", "") or print (mysql_error()); 
-				mysql_select_db("casamento", $conecta) or print(mysql_error());  
-				///////////////////////////////
-				
-				/////Le as mensagens do banco
-				$sql = "SELECT `nome`, `mensagem`, `data` FROM `mensagens2`"; 
-				$result = mysql_query($sql, $conecta); 
-				 
-				/* Escreve resultados até que não haja mais linhas na tabela */ 
-				 
-				while($consulta = mysql_fetch_array($result)) { 
-				   echo "<div class=\"mensagem\">
-							<h1>$consulta[nome]</h1>
-							<h2>$consulta[data]</h2>
-							<p>$consulta[mensagem] </p>
-						</div>";
-				} 
-				////////////////////////////
-			?>
+		<div id="texto-principal">
+			<h2>Faça parte da nossa história de amor, confirme sua presença.</h2>
 		</div>
 		
+			<form id="confirmacao" method="post" action="_php/confirma.php" onsubmit="confirmarPresenca()">
+				<fieldset id="bloco-confirmacao">
+				<legend>Identificação do Usuário</legend>
+				
+				<input type="text" id="nomeConvidado" name="nomeConvidado" placeholder="Nome Completo do Convidado" required />
+				<fieldset id="resposta">Você irá ao evento?
+					<p><label name="tSimLabel" id="cSimLabel" for="cSim">Sim</label><input type="radio" name="tResposta" value="Sim" id="cSim" checked></p>
+					<p><label name="tNaoLabel" id="cNaoLabel" for="cNao">Não</label><input type="radio" name="tResposta" value="Nao" id="cNao"/></p>
+				</fieldset>
+				<p><label name="tQntLabel" id="cQntLabel" for="cQnt">Quantos adultos? (a partir de 11 anos) </label><input type="number" name="tQnt" id="cQnt" min="1" max="10" value="1"/></label></p></p>
+				<input type="text" id="email" name="email" placeholder="E-mail" required />
+				<input type="text" id="telefone" name="telefone" placeholder="Telefone" class="telefone" required />
+				</fieldset>
+				<input id="enviar" type="submit" value="Enviar Dados"/>
+			</form>
 		
 		<footer id="rodape">
 			<div><p>Faltam <span id="dias">clock</span> dias</p></div>

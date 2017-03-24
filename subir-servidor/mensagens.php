@@ -12,10 +12,10 @@
  $_CV['registraAuto'] = true;       // Registra as visitas automaticamente?
  $_CV['conectaMySQL'] = true;       // Abre uma conexão com o servidor MySQL?
  $_CV['iniciaSessao'] = true;       // Inicia a sessão com um session_start()?
- $_CV['servidor'] = '127.0.0.1';    // Servidor MySQL
- $_CV['usuario'] = 'root';          // Usuário MySQL
- $_CV['senha'] = '';                // Senha MySQL
- $_CV['banco'] = 'casamento';       // Banco de dados MySQL
+ $_CV['servidor'] = 'mysql.weblink.com.br';    // Servidor MySQL
+ $_CV['usuario'] = 'u348797896_fdias';          // UsuÃ¡rio MySQL
+ $_CV['senha'] = '130392';                // Senha MySQL
+ $_CV['banco'] = 'u348797896_casam';       // Banco de dados MySQL
  $_CV['tabela'] = 'visitas';        // Nome da tabela onde os dados são salvos
  // ==============================
  // ======================================
@@ -117,7 +117,7 @@
 		
 		<nav id="menu" class="posicao-menu">
 			<ul>
-				<li><a href="home.php">Home</a></li>
+				<li><a href="http://leticiaebreno.com">Home</a></li>
 				<li><a href="presenca.php">Confirmação de Presença</a></li>
 				<li><a href="presentes.php">Lista de Presentes</a></li>
 				<li><a href="mensagens.php">Mural de Mensagens</a></li>
@@ -140,21 +140,21 @@
 			<h1>Deixe sua mensagem de carinho para nós...</h1>
 			<h2>Palavras são carinhos doados. Obrigado por nos dar o seu carinho.</br>Iremos lembrar para sempre deste momento tão esperado.</h2>
 			
-			<form method="post" action="_php/mensagem.php" onsubmit="confirmarPresenca()>
-				<input type="text" id="cNome" name="tNome" placeholder="Nome"/></br></br>
-				<input type="text" id="cEmail" name="tEmail" placeholder="Email"/></br></br>
-				<textarea cols="59" rows="10" id="cMensagem" name="tMensagem" placeholder="Mensagem"></textarea></br>
+			<form method="post" action="_php/mensagem.php" onsubmit="confirmarMensagem()">
+				<input type="text" id="cNome" name="tNome" placeholder="Nome" required /></br></br>
+				<input type="text" id="cEmail" name="tEmail" placeholder="Email" required /></br></br>
+				<textarea cols="59" rows="10" id="cMensagem" name="tMensagem" placeholder="Mensagem" required></textarea></br>
 				<input type="submit" value="Enviar Mensagem"/>
 			</form>
 
 			<?php 
 				////Faz a conexão com o banco
-				$conecta = mysql_connect("127.0.0.1", "root", "") or print (mysql_error()); 
-				mysql_select_db("casamento", $conecta) or print(mysql_error());  
+				$conecta = mysql_connect("mysql.weblink.com.br", "u348797896_fdias", "130392") or print (mysql_error()); 
+				mysql_select_db("u348797896_casam", $conecta) or print(mysql_error()); 
 				///////////////////////////////
 				
 				/////Le as mensagens do banco
-				$sql = "SELECT `nome`, `mensagem`, `data` FROM `mensagens2`"; 
+				$sql = "SELECT `nome`, `mensagem`, `data` FROM `mensagens` ORDER BY `data` DESC"; 
 				$result = mysql_query($sql, $conecta); 
 				 
 				/* Escreve resultados até que não haja mais linhas na tabela */ 
@@ -162,7 +162,7 @@
 				while($consulta = mysql_fetch_array($result)) { 
 				   echo "<div class=\"mensagem\">
 							<h1>$consulta[nome]</h1>
-							<h2>$consulta[data]</h2>
+							<h2>" . date('d/m/Y', strtotime($consulta[data])). "</h2>
 							<p>$consulta[mensagem] </p>
 						</div>";
 				} 

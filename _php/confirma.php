@@ -1,8 +1,8 @@
 <?php
 	$redirect = "../presenca.php";
 	////Faz a conexão com o banco
-	$conecta = mysql_connect("127.0.0.1", "root", "") or print (mysql_error()); 
-	mysql_select_db("casamento", $conecta) or print(mysql_error()); 
+	$conecta = mysql_connect("mysql.weblink.com.br", "u348797896_fdias", "130392") or print (mysql_error()); 
+	mysql_select_db("u348797896_casam", $conecta) or print(mysql_error()); 
 	///////////////////////////////
 	
 	////Pega os dados do formulário

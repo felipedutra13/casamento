@@ -151,7 +151,7 @@
 					<p><label name="tSimLabel" id="cSimLabel" for="cSim">Sim</label><input type="radio" name="tResposta" value="Sim" id="cSim" checked></p>
 					<p><label name="tNaoLabel" id="cNaoLabel" for="cNao">Não</label><input type="radio" name="tResposta" value="Nao" id="cNao"/></p>
 				</fieldset>
-				<p><label name="tQntLabel" id="cQntLabel" for="cQnt">Quantos adultos? </label><input type="number" name="tQnt" id="cQnt" min="1" max="10" value="1"/></label></p></p>
+				<p><label name="tQntLabel" id="cQntLabel" for="cQnt">Quantos adultos? (a partir de 11 anos) </label><input type="number" name="tQnt" id="cQnt" min="1" max="10" value="1"/></label></p></p>
 				<input type="text" id="email" name="email" placeholder="E-mail" required/>
 				<input type="text" id="telefone" name="telefone" placeholder="Telefone" class="telefone" required/>
 				</fieldset>
