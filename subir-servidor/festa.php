@@ -136,7 +136,7 @@
 			</figcaption>
 		</figure>
 		
-		<h2>Nos encontramos dia 17 de Junho de 2017, às 16:15h no Sposato festas – Leopoldina/MG.</br></br></br>
+		<h2>Nos encontramos dia 17 de Junho de 2017, às 16:15h no Sposato Festas – Leopoldina/MG.</br></br></br>
 		</h2>
 		
 			<section id="corpo">

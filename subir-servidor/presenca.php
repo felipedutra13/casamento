@@ -144,16 +144,17 @@
 		
 			<form id="confirmacao" method="post" action="_php/confirma.php" onsubmit="confirmarPresenca()">
 				<fieldset id="bloco-confirmacao">
-				<legend>Identificação do Usuário</legend>
+				<legend>Identificação do Convidado</legend>
 				
 				<input type="text" id="nomeConvidado" name="nomeConvidado" placeholder="Nome Completo do Convidado" required />
 				<fieldset id="resposta">Você irá ao evento?
 					<p><label name="tSimLabel" id="cSimLabel" for="cSim">Sim</label><input type="radio" name="tResposta" value="Sim" id="cSim" checked></p>
 					<p><label name="tNaoLabel" id="cNaoLabel" for="cNao">Não</label><input type="radio" name="tResposta" value="Nao" id="cNao"/></p>
 				</fieldset>
-				<p><label name="tQntLabel" id="cQntLabel" for="cQnt">Quantos adultos? (a partir de 11 anos) </label><input type="number" name="tQnt" id="cQnt" min="1" max="10" value="1"/></label></p></p>
+				<p><label name="tQntLabel" id="cQntLabel" for="cQnt">Quantos adultos? (a partir de 11 anos) </label><input type="number" name="tQnt" id="cQnt" min="1" max="20" value="1"/></label></p></p>
 				<input type="text" id="email" name="email" placeholder="E-mail" required />
-				<input type="text" id="telefone" name="telefone" placeholder="Telefone" class="telefone" required />
+				<input type="text" id="telefone" name="telefone" placeholder="Telefone" class="telefone" required /></br></br>
+				<textarea cols="59" rows="10" id="cAcompanhantes" name="tAcompanhantes" placeholder="Nome dos Acompanhantes"></textarea></br>
 				</fieldset>
 				<input id="enviar" type="submit" value="Enviar Dados"/>
 			</form>

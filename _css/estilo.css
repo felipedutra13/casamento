@@ -19,16 +19,17 @@ div#cabecalho {
 
 div#cabecalho h1 {
 	position: relative;
-	top: 220px;
+	top: 110px;
 	text-align: center;
 	font-family: 'Alex Brush', cursive;
 	font-size: 40pt;
-	color: rgb(218, 165, 32);
+	--color: rgb(218, 165, 32);
+	color: white;
 }
 
 div#cabecalho h2 {
 	position: relative;
-	top: 200px;
+	top: 90px;
 	text-align: center;
 	font-family: 'Inconsolata', monospace;
 	color: white;
@@ -43,7 +44,8 @@ nav#menu {
   
 }
 nav#menu ul {
-  background-color: #dddddd;
+  --background-color: #dddddd;
+  background-color: rgb(255, 212, 255);
 }
 
 .posicao-menu {
@@ -56,7 +58,8 @@ nav#menu ul {
 
 nav#menu li {
   display: inline-block;
-  background-color: #dddddd;
+  --background-color: #dddddd;
+  background-color: rgb(255, 212, 255);
   padding: 10px;
   margin: 0px -2px 0px -2px; 
   transition: background-color 1s;
@@ -65,7 +68,8 @@ nav#menu li {
 }
 
 nav#menu li:hover {
-  background-color: #606060;
+  --background-color: #606060;
+  background-color: rgb(205,110,129);
 }
 
 nav#menu a {
@@ -89,9 +93,9 @@ nav#menu li:hover a{
 	--font-family: 'Roboto', sans-serif;
 	font-family: 'Times New Roman';
 	text-align: center;
-	width: 70%;
+	width: 80%;
 	margin: auto;
-	color: rgb(205,110,129);
+	--color: rgb(205,110,129);
 }
 
 #texto-principal h2 {
@@ -99,12 +103,15 @@ nav#menu li:hover a{
 }
 
 #texto-principal h1 {
+	color: rgb(205,110,129);
 	font-weight: bold;
 	font-style: italic;
 }
 
 #texto-principal p{
+	font-size: 14pt;
 	font-style: italic;
+	color: black;
 }
 
 #teste {
@@ -124,7 +131,8 @@ figure h1 {
 	top: -90px;
 	left: 528px;
 	width: 500px;
-	color: rgb(205, 127, 50);
+	--color: rgb(205, 127, 50);
+	color: white;
 	font-family: 'Trirong', serif;
 	font-size: 21pt;
 }
@@ -171,8 +179,8 @@ a:active {
 
 #galeria {
 	position: relative;
-	width: 733px;
-	height: 550px;
+	width: 458px;
+	height: 620px;
 	left: 270px;
 }
 
@@ -234,13 +242,13 @@ a:active {
 }
 
 #lojas-virtuais h2 {
-	margin-top: 40px;
+	margin-top: 50px;
 }
 
 #lojas-fisicas {
 	position: absolute;
 	left: 700px;
-	top: 250px;
+	top: 242px;
 	width: 500px;
 	height: 200px;
 	border: black 1px solid;
@@ -259,5 +267,5 @@ a:active {
 }
 
 #lojas-fisicas h2 {
-	margin-top: 45px;
+	margin-top: 50px;
 }

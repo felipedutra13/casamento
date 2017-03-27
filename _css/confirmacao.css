@@ -42,10 +42,11 @@ fieldset#resposta {
 }
 
 fieldset#bloco-confirmacao {
-  background: url(../_imagens/aliancas.png) no-repeat 95% 95%;
+  background: url(../_imagens/aliancas.png) no-repeat 95% 25%;
 }
 
 #enviar {
 	position: relative;
 	left: 15px;
+	background-color: rgb(255, 212, 255);
 }

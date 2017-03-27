@@ -22,7 +22,7 @@ form {
 
 .mensagem  h2{
 	font-family: 'Inconsolata', monospace;
-	color: white;
+	color: rgb(205,110,129);
 	font-size: 12pt;
 }
 
@@ -42,7 +42,7 @@ form {
 
 .mensagem {
 	margin-top: 80px;
-	background: rgba(205,205,205, 0.8);
+	background: rgb(244,244,244);
 	--text-align: center;
 	width: 80%;
 	margin: auto;
@@ -69,4 +69,8 @@ form {
 	width: 80%;
 	font-size: 15pt;
 	font-family: 'Dancing Script', cursive;
+}
+
+#enviar {
+	background-color: rgb(255, 212, 255);
 }

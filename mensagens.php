@@ -140,11 +140,11 @@
 			<h1>Deixe sua mensagem de carinho para nós...</h1>
 			<h2>Palavras são carinhos doados. Obrigado por nos dar o seu carinho.</br>Iremos lembrar para sempre deste momento tão esperado.</h2>
 			
-			<form method="post" action="_php/mensagem.php" onsubmit="confirmarPresenca()>
+			<form method="post" action="_php/mensagem.php" onsubmit="confirmarPresenca()">
 				<input type="text" id="cNome" name="tNome" placeholder="Nome"/></br></br>
 				<input type="text" id="cEmail" name="tEmail" placeholder="Email"/></br></br>
 				<textarea cols="59" rows="10" id="cMensagem" name="tMensagem" placeholder="Mensagem"></textarea></br>
-				<input type="submit" value="Enviar Mensagem"/>
+				<input id="enviar" type="submit" value="Enviar Mensagem"/>
 			</form>
 
 			<?php 

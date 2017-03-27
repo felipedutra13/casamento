@@ -11,9 +11,10 @@
 	$qnt = $_POST["tQnt"];
 	$email = $_POST["email"];
 	$telefone = $_POST["telefone"];
+	$acompanhantes = $_POST["tAcompanhantes"];
 	
 	////escreve a query
-	$query = "INSERT INTO `presenca` VALUES('$nome','$confirmacao','$qnt','$email','$telefone');";
+	$query = "INSERT INTO `presenca` VALUES('$nome','$confirmacao','$qnt','$email','$telefone', '$acompanhantes');";
 	////executa a query no banco
 	$result = mysql_query($query, $conecta); 
 	///fecha a conexão

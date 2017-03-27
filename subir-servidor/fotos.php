@@ -132,7 +132,7 @@
 			<figure>
 				<img src="_imagens/moldura.png"/>
 				<figcaption>
-					<h1>Álbuns</h1>
+					<h1>Fotos</h1>
 				</figcaption>
 			</figure>
 			<div id="apresentacao">

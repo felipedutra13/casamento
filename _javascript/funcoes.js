@@ -29,17 +29,17 @@ var arrayImagensIndex = 0;
 
 ////preenche o array de imagens
 $(document).ready(function() {
-  arrayImagens = ["foto01.jpg","foto02.jpg","foto03.jpg"];
+  arrayImagens = ["foto01.jpg","foto02.jpg","foto03.jpg","foto04.jpg","foto05.jpg","foto06.jpg","foto07.jpg","foto08.jpg","foto09.jpg","foto10.jpg","foto11.jpg","foto12.jpg","foto13.jpg","foto14.jpg","foto15.jpg","foto16.jpg","foto17.jpg","foto18.jpg","foto19.jpg"];
 });
 
 //////troca a imagem automaticamente
 function trocaImagem() {
   $("img#galeria").fadeOut(300, function() {
 	arrayImagensIndex++;
-    if(arrayImagensIndex == 3)
+    if(arrayImagensIndex == 19)
 		arrayImagensIndex = 0;
 	if(arrayImagensIndex == -1)
-		arrayImagensIndex = 2;
+		arrayImagensIndex = 18;
     $("img#galeria").attr("src", "_imagens/"+arrayImagens[arrayImagensIndex]);
   });
   $("img#galeria").fadeIn(300);

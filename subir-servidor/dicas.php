@@ -132,7 +132,7 @@
 		<div id="teste">
 		<div id="texto-principal">
 			<h1>Sugestões de Hospedagem!</h1>
-			<h2>Separamos algumas opções para ajudar vocês, nossos queridos convidados, a se prepararem para o Grande Dia.</h2>
+			<h2>Separamos algumas opções para ajudar vocês, nossos queridos convidados, a se prepararem para o grande dia.</h2>
 
 			<p><span class="hotel">Hotel Minas Tower</span></br>
 			Telefone: (32) 3401-5000</br>

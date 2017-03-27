@@ -144,7 +144,7 @@
 				<input type="text" id="cNome" name="tNome" placeholder="Nome" required /></br></br>
 				<input type="text" id="cEmail" name="tEmail" placeholder="Email" required /></br></br>
 				<textarea cols="59" rows="10" id="cMensagem" name="tMensagem" placeholder="Mensagem" required></textarea></br>
-				<input type="submit" value="Enviar Mensagem"/>
+				<input id="enviar" type="submit" value="Enviar Mensagem"/>
 			</form>
 
 			<?php 
