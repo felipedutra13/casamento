@@ -107,6 +107,8 @@
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
 		<script src="jquery.countdown-2.2.0/jquery.countdown.js"></script>
 		<script src="_javascript/funcoes.js"></script>
+		<link rel="stylesheet" href="_css/craftyslide.css" />
+	    <script src="_javascript/craftyslide.js"></script>
 	</head>
 	<body>
 		<div id="cabecalho">
@@ -128,19 +130,94 @@
 		
 		<div id="teste">
 		
-		<div id="albuns">
-			<figure>
-				<img src="_imagens/moldura.png"/>
-				<figcaption>
-					<h1>Álbuns</h1>
-				</figcaption>
-			</figure>
-			<div id="apresentacao">
-				<img id="seta-esquerda" src="_imagens/seta-esquerda.png"/>
-				<img id="galeria" src="_imagens/foto01.jpg"/>
-				<img id="seta-direita" src="_imagens/seta-direita.png"/>
+			<div id="albuns">
+					<figure>
+						<img src="_imagens/moldura.png"/>
+						<figcaption>
+							<h1>Álbuns</h1>
+						</figcaption>
+					</figure>
+				<div id="slideshow">
+					<ul>
+					  <li>
+						<img src="_imagens/foto01.jpg" alt=""/>
+					  </li>
+					  
+					  <li>
+						<img src="_imagens/foto02.jpg" alt=""/>
+					  </li>
+					  
+					  <li>           
+						<img src="_imagens/foto03.jpg" alt=""/>
+					  </li>
+					  
+					  <li>           
+						<img src="_imagens/foto04.jpg" alt=""/>
+					  </li>
+					  
+					  <li>           
+						<img src="_imagens/foto05.jpg" alt=""/>
+					  </li>
+					  
+					  <li>           
+						<img src="_imagens/foto06.jpg" alt=""/>
+					  </li>
+					  
+					  <li>           
+						<img src="_imagens/foto07.jpg" alt=""/>
+					  </li>
+					  
+					  <li>           
+						<img src="_imagens/foto08.jpg" alt=""/>
+					  </li>
+					  
+					  <li>           
+						<img src="_imagens/foto09.jpg" alt=""/>
+					  </li>
+					  
+					  <li>           
+						<img src="_imagens/foto10.jpg" alt=""/>
+					  </li>
+					  
+					  <li>           
+						<img src="_imagens/foto11.jpg" alt=""/>
+					  </li>
+					  
+					  <li>           
+						<img src="_imagens/foto12.jpg" alt=""/>
+					  </li>
+					  
+					  <li>           
+						<img src="_imagens/foto13.jpg" alt=""/>
+					  </li>
+					  
+					  <li>           
+						<img src="_imagens/foto14.jpg" alt=""/>
+					  </li>
+					  
+					  <li>           
+						<img src="_imagens/foto15.jpg" alt=""/>
+					  </li>
+					  
+					  <li>           
+						<img src="_imagens/foto16.jpg" alt=""/>
+					  </li>
+					  
+					  <li>           
+						<img src="_imagens/foto17.jpg" alt=""/>
+					  </li>
+					  
+					  <li>           
+						<img src="_imagens/foto18.jpg" alt=""/>
+					  </li>
+					  
+					  <li>           
+						<img src="_imagens/foto19.jpg" alt=""/>
+					  </li>					
+
+					</ul>
+				</div>
 			</div>
-		</div>
 		
 		<footer id="rodape">
 			<div><p>Faltam <span id="dias">clock</span> dias</p></div>
@@ -155,5 +232,8 @@
             <source src="_songs/beirut.mp3" type="audio/mpeg"/>
           </audio>
 		</div>	
+		<script>
+			$("#slideshow").craftyslide();
+		</script> 
 	</body>
 </html>

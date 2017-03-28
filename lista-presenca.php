@@ -11,7 +11,7 @@
 			///////////////////////////////
 			
 			////escreve a query
-			$query = "SELECT `nome`, `confirmacao`, `adultos` FROM `presenca`;";
+			$query = "SELECT `nome`, `confirmacao`, `adultos`, `acompanhantes` FROM `presenca`;";
 			////executa a query no banco
 			$result = mysql_query($query, $conecta);
 
@@ -21,6 +21,7 @@
 						<th>Nome</th>
 						<th>Confirmacao</th>
 						<th>Adultos</th>
+						<th>Acompanhantes</th>
 					</thead>";
 				
 				while($consulta = mysql_fetch_array($result)) { 
@@ -28,6 +29,7 @@
 							<td>$consulta[nome]</td>
 							<td>$consulta[confirmacao]</td>
 							<td>$consulta[adultos]</td>
+							<td>$consulta[acompanhantes]</td>
 						</tr>";
 				} 
 				echo "</table>";
