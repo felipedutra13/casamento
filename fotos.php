@@ -103,12 +103,12 @@
 		<link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
 		<link rel="stylesheet" type="text/css" href="_css/rodape.css"/>
 		<link rel="stylesheet" type="text/css" href="_css/audio.css"/>
+		<link rel="stylesheet" type="text/css" href="_css/galeria.css"/>
 		<link rel="shortcut icon" href="_imagens/icone.png"/>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
 		<script src="jquery.countdown-2.2.0/jquery.countdown.js"></script>
 		<script src="_javascript/funcoes.js"></script>
-		<link rel="stylesheet" href="_css/craftyslide.css" />
-	    <script src="_javascript/craftyslide.js"></script>
+		<script src="_javascript/galeria.js"></script>
 	</head>
 	<body>
 		<div id="cabecalho">
@@ -132,89 +132,53 @@
 		
 			<div id="albuns">
 					<figure>
-						<img src="_imagens/moldura.png"/>
+						<img src="_imagens/moldura-fotos.png"/>
 						<figcaption>
-							<h1>Álbuns</h1>
+							<h1 id="titulo">Fotos</h1>
 						</figcaption>
 					</figure>
 				<div id="slideshow">
-					<ul>
-					  <li>
-						<img src="_imagens/foto01.jpg" alt=""/>
-					  </li>
-					  
-					  <li>
-						<img src="_imagens/foto02.jpg" alt=""/>
-					  </li>
-					  
-					  <li>           
-						<img src="_imagens/foto03.jpg" alt=""/>
-					  </li>
-					  
-					  <li>           
-						<img src="_imagens/foto04.jpg" alt=""/>
-					  </li>
-					  
-					  <li>           
-						<img src="_imagens/foto05.jpg" alt=""/>
-					  </li>
-					  
-					  <li>           
-						<img src="_imagens/foto06.jpg" alt=""/>
-					  </li>
-					  
-					  <li>           
-						<img src="_imagens/foto07.jpg" alt=""/>
-					  </li>
-					  
-					  <li>           
-						<img src="_imagens/foto08.jpg" alt=""/>
-					  </li>
-					  
-					  <li>           
-						<img src="_imagens/foto09.jpg" alt=""/>
-					  </li>
-					  
-					  <li>           
-						<img src="_imagens/foto10.jpg" alt=""/>
-					  </li>
-					  
-					  <li>           
-						<img src="_imagens/foto11.jpg" alt=""/>
-					  </li>
-					  
-					  <li>           
-						<img src="_imagens/foto12.jpg" alt=""/>
-					  </li>
-					  
-					  <li>           
-						<img src="_imagens/foto13.jpg" alt=""/>
-					  </li>
-					  
-					  <li>           
-						<img src="_imagens/foto14.jpg" alt=""/>
-					  </li>
-					  
-					  <li>           
-						<img src="_imagens/foto15.jpg" alt=""/>
-					  </li>
-					  
-					  <li>           
-						<img src="_imagens/foto16.jpg" alt=""/>
-					  </li>
-					  
-					  <li>           
-						<img src="_imagens/foto17.jpg" alt=""/>
-					  </li>
-					  
-					  <li>           
-						<img src="_imagens/foto18.jpg" alt=""/>
-					  </li>
-					  
-					  <li>           
-						<img src="_imagens/foto19.jpg" alt=""/>
-					  </li>					
-
+					<img src="_imagens/foto01.jpg" alt=""/>
+					<img src="_imagens/foto02.jpg" alt=""/>          
+					<img src="_imagens/foto03.jpg" alt=""/>           
+					<img src="_imagens/foto04.jpg" alt=""/>          
+					<img src="_imagens/foto05.jpg" alt=""/>      
+					<img src="_imagens/foto06.jpg" alt=""/>          
+					<img src="_imagens/foto07.jpg" alt=""/>           
+					<img src="_imagens/foto08.jpg" alt=""/>           
+					<img src="_imagens/foto09.jpg" alt=""/>           
+					<img src="_imagens/foto10.jpg" alt=""/>           
+					<img src="_imagens/foto11.jpg" alt=""/>           
+					<img src="_imagens/foto12.jpg" alt=""/>          
+					<img src="_imagens/foto13.jpg" alt=""/>           
+					<img src="_imagens/foto14.jpg" alt=""/>           
+					<img src="_imagens/foto15.jpg" alt=""/>           
+					<img src="_imagens/foto16.jpg" alt=""/>          
+					<img src="_imagens/foto17.jpg" alt=""/>          
+					<img src="_imagens/foto18.jpg" alt=""/>           
+					<img src="_imagens/foto19.jpg" alt=""/>
+				</div>
+				<div>
+					<ul id="pagination">
+						<li><a href="#slide1">1</a></li>
+						<li><a href="#slide2">2</a></li>
+						<li><a href="#slide3">3</a></li>
+						<li><a href="#slide4">4</a></li>
+						<li><a href="#slide5">5</a></li>
+						<li><a href="#slide6">1</a></li>
+						<li><a href="#slide7">2</a></li>
+						<li><a href="#slide8">3</a></li>
+						<li><a href="#slide9">4</a></li>
+						<li><a href="#slide10">5</a></li>
+						<li><a href="#slide11">1</a></li>
+						<li><a href="#slide12">2</a></li>
+						<li><a href="#slide13">3</a></li>
+						<li><a href="#slide14">4</a></li>
+						<li><a href="#slide15">5</a></li>
+						<li><a href="#slide16">1</a></li>
+						<li><a href="#slide17">2</a></li>
+						<li><a href="#slide18">3</a></li>
+						<li><a href="#slide19">4</a></li>
 					</ul>
 				</div>
 			</div>
@@ -232,8 +196,6 @@
             <source src="_songs/beirut.mp3" type="audio/mpeg"/>
           </audio>
 		</div>	
-		<script>
-			$("#slideshow").craftyslide();
-		</script> 
+
 	</body>
 </html>

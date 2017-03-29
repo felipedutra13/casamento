@@ -131,7 +131,6 @@ figure h1 {
 	top: -90px;
 	left: 528px;
 	width: 500px;
-	--color: rgb(205, 127, 50);
 	color: white;
 	font-family: 'Trirong', serif;
 	font-size: 21pt;
@@ -176,45 +175,6 @@ a:hover {
 a:active {
 	color: rgb(205,110,129);
 } 
-
-/*#galeria {
-	position: relative;
-	width: 458px;
-	height: 620px;
-	left: 270px;
-}
-
-#seta-esquerda {
-	cursor: pointer;
-	padding: 10px;
-	width: 30px;
-	height: 40px;
-	position: relative;
-	left: 323px;
-	top: -250px;
-	z-index: 99;
-	background: rgba(66,66,66,0.2);
-}
-
-#seta-esquerda:hover {
-	opacity: 0.4;
-}
-
-#seta-direita {
-	cursor: pointer;
-	padding: 10px;
-	width: 30px;
-	height: 40px;
-	position: relative;
-	left: 217px;
-	top: -250px;
-	z-index: 99;
-	background: rgba(66,66,66,0.2);
-}
-
-#seta-direita:hover {
-	opacity: 0.4;
-}*/
 
 #lista-presentes h2 {
 	text-align:center;

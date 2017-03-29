@@ -103,10 +103,12 @@
 		<link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
 		<link rel="stylesheet" type="text/css" href="_css/rodape.css"/>
 		<link rel="stylesheet" type="text/css" href="_css/audio.css"/>
+		<link rel="stylesheet" type="text/css" href="_css/galeria.css"/>
 		<link rel="shortcut icon" href="_imagens/icone.png"/>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
 		<script src="jquery.countdown-2.2.0/jquery.countdown.js"></script>
 		<script src="_javascript/funcoes.js"></script>
+		<script src="_javascript/galeria.js"></script>
 	</head>
 	<body>
 		<div id="cabecalho">
@@ -116,7 +118,7 @@
 		
 		<nav id="menu" class="posicao-menu">
 			<ul>
-				<li><a href="http://leticiaebreno.com">Home</a></li>
+				<li><a href="home.php">Home</a></li>
 				<li><a href="presenca.php">Confirmação de Presença</a></li>
 				<li><a href="presentes.php">Lista de Presentes</a></li>
 				<li><a href="mensagens.php">Mural de Mensagens</a></li>
@@ -128,19 +130,58 @@
 		
 		<div id="teste">
 		
-		<div id="albuns">
-			<figure>
-				<img src="_imagens/moldura.png"/>
-				<figcaption>
-					<h1>Fotos</h1>
-				</figcaption>
-			</figure>
-			<div id="apresentacao">
-				<img id="seta-esquerda" src="_imagens/seta-esquerda.png"/>
-				<img id="galeria" src="_imagens/foto01.jpg"/>
-				<img id="seta-direita" src="_imagens/seta-direita.png"/>
+			<div id="albuns">
+					<figure>
+						<img src="_imagens/moldura-fotos.png"/>
+						<figcaption>
+							<h1>Fotos</h1>
+						</figcaption>
+					</figure>
+				<div id="slideshow">
+					<img src="_imagens/foto01.jpg" alt=""/>
+					<img src="_imagens/foto02.jpg" alt=""/>          
+					<img src="_imagens/foto03.jpg" alt=""/>           
+					<img src="_imagens/foto04.jpg" alt=""/>          
+					<img src="_imagens/foto05.jpg" alt=""/>      
+					<img src="_imagens/foto06.jpg" alt=""/>          
+					<img src="_imagens/foto07.jpg" alt=""/>           
+					<img src="_imagens/foto08.jpg" alt=""/>           
+					<img src="_imagens/foto09.jpg" alt=""/>           
+					<img src="_imagens/foto10.jpg" alt=""/>           
+					<img src="_imagens/foto11.jpg" alt=""/>           
+					<img src="_imagens/foto12.jpg" alt=""/>          
+					<img src="_imagens/foto13.jpg" alt=""/>           
+					<img src="_imagens/foto14.jpg" alt=""/>           
+					<img src="_imagens/foto15.jpg" alt=""/>           
+					<img src="_imagens/foto16.jpg" alt=""/>          
+					<img src="_imagens/foto17.jpg" alt=""/>          
+					<img src="_imagens/foto18.jpg" alt=""/>           
+					<img src="_imagens/foto19.jpg" alt=""/>
+				</div>
+				<div>
+					<ul id="pagination">
+						<li><a href="#slide1">1</a></li>
+						<li><a href="#slide2">2</a></li>
+						<li><a href="#slide3">3</a></li>
+						<li><a href="#slide4">4</a></li>
+						<li><a href="#slide5">5</a></li>
+						<li><a href="#slide6">1</a></li>
+						<li><a href="#slide7">2</a></li>
+						<li><a href="#slide8">3</a></li>
+						<li><a href="#slide9">4</a></li>
+						<li><a href="#slide10">5</a></li>
+						<li><a href="#slide11">1</a></li>
+						<li><a href="#slide12">2</a></li>
+						<li><a href="#slide13">3</a></li>
+						<li><a href="#slide14">4</a></li>
+						<li><a href="#slide15">5</a></li>
+						<li><a href="#slide16">1</a></li>
+						<li><a href="#slide17">2</a></li>
+						<li><a href="#slide18">3</a></li>
+						<li><a href="#slide19">4</a></li>
+					</ul>
+				</div>
 			</div>
-		</div>
 		
 		<footer id="rodape">
 			<div><p>Faltam <span id="dias">clock</span> dias</p></div>
@@ -155,5 +196,6 @@
             <source src="_songs/beirut.mp3" type="audio/mpeg"/>
           </audio>
 		</div>	
+
 	</body>
 </html>
