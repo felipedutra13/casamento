@@ -1,5 +1,5 @@
 var imagemVisible = 1;
-var delay = 3000;
+var delay = 6000;
 var intervalo = setInterval(trocaFoto, delay);
 
 $(function () {

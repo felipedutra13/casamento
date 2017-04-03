@@ -50,3 +50,7 @@ fieldset#bloco-confirmacao {
 	left: 15px;
 	background-color: rgb(255, 212, 255);
 }
+
+#confirmar {
+	left: 530px;
+}

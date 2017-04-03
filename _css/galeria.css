@@ -1,9 +1,5 @@
 @charset "utf-8";
 
-#titulo {
-	left: 578px;
-}
-
 #slideshow {
 	margin:0;
 	padding:0;
@@ -12,7 +8,7 @@
 	-webkit-box-shadow:0 3px 5px #999;
 	-moz-box-shadow:0 3px 5px #999;
 	box-shadow:0 3px 5px #999;
-	left: 430px;
+	left: 440px;
 	width: 410px;
 	height: 550px;
 }
@@ -47,4 +43,10 @@
 
 #pagination li a.active {
 	background-position:0 10px;
+}
+
+#fotos {
+	--margin-left: auto;
+	--margin-right: auto;
+	left: 627px;
 }

@@ -134,7 +134,7 @@
 		<figure>
 			<img src="_imagens/moldura.png"/>
 			<figcaption>
-				<h1>Confirmar Presença</h1>
+				<h1 id="confirmar">Confirmar Presença</h1>
 			</figcaption>
 		</figure>
 		

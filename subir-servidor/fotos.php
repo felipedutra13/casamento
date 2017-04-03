@@ -118,7 +118,7 @@
 		
 		<nav id="menu" class="posicao-menu">
 			<ul>
-				<li><a href="home.php">Home</a></li>
+				<li><a href="http://leticiaebreno.com">Home</a></li>
 				<li><a href="presenca.php">Confirmação de Presença</a></li>
 				<li><a href="presentes.php">Lista de Presentes</a></li>
 				<li><a href="mensagens.php">Mural de Mensagens</a></li>
@@ -132,9 +132,9 @@
 		
 			<div id="albuns">
 					<figure>
-						<img src="_imagens/moldura-fotos.png"/>
+						<img src="_imagens/moldura.png"/>
 						<figcaption>
-							<h1>Fotos</h1>
+							<h1 id="fotos">Fotos</h1>
 						</figcaption>
 					</figure>
 				<div id="slideshow">

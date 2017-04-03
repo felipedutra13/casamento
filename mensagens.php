@@ -132,7 +132,7 @@
 		<figure>
 			<img src="_imagens/moldura.png"/>
 			<figcaption>
-				<h1>Mural de Mensagens</h1>
+				<h1 id="mural">Mural de Mensagens</h1>
 			</figcaption>
 		</figure>
 		

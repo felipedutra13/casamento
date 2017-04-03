@@ -132,9 +132,9 @@
 		
 			<div id="albuns">
 					<figure>
-						<img src="_imagens/moldura-fotos.png"/>
+						<img src="_imagens/moldura.png"/>
 						<figcaption>
-							<h1 id="titulo">Fotos</h1>
+							<h1 id="fotos">Fotos</h1>
 						</figcaption>
 					</figure>
 				<div id="slideshow">
