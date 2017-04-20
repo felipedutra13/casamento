@@ -48,7 +48,19 @@ fieldset#bloco-confirmacao {
 #enviar {
 	position: relative;
 	left: 15px;
-	background-color: rgb(255, 212, 255);
+	--background-color: rgb(205,110,129);
+	background-color: rgb(232,181,187);
+	color: white;
+	font-weight: bold;
+	padding: 8px;
+	box-shadow: 2px 2px 1px #aaaaaa;
+	cursor: pointer;
+	transition: background-color 0.5s;
+}
+
+#enviar:hover {
+	text-decoration: underline;
+	background-color: rgb(205,110,129);
 }
 
 #confirmar {

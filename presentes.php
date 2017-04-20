@@ -12,10 +12,10 @@
  $_CV['registraAuto'] = true;       // Registra as visitas automaticamente?
  $_CV['conectaMySQL'] = true;       // Abre uma conexão com o servidor MySQL?
  $_CV['iniciaSessao'] = true;       // Inicia a sessão com um session_start()?
- $_CV['servidor'] = '127.0.0.1';    // Servidor MySQL
- $_CV['usuario'] = 'root';          // Usuário MySQL
- $_CV['senha'] = '';                // Senha MySQL
- $_CV['banco'] = 'casamento';       // Banco de dados MySQL
+ $_CV['servidor'] = 'mysql.weblink.com.br';    // Servidor MySQL
+ $_CV['usuario'] = 'u348797896_fdias';          // UsuÃ¡rio MySQL
+ $_CV['senha'] = '130392';                // Senha MySQL
+ $_CV['banco'] = 'u348797896_casam';       // Banco de dados MySQL
  $_CV['tabela'] = 'visitas';        // Nome da tabela onde os dados são salvos
  // ==============================
  // ======================================
@@ -116,7 +116,7 @@
 		
 		<nav id="menu" class="posicao-menu">
 			<ul>
-				<li><a href="home.php">Home</a></li>
+				<li><a href="http://leticiaebreno.com">Home</a></li>
 				<li><a href="presenca.php">Confirmação de Presença</a></li>
 				<li><a href="presentes.php">Lista de Presentes</a></li>
 				<li><a href="mensagens.php">Mural de Mensagens</a></li>
@@ -140,9 +140,7 @@
 			<div id="lojas-virtuais">
 				<img src="_imagens/caixa.png"/>
 				<h2>Lojas virtuais</h2>
-				<a href="http://americanas.com.br" target="_blank">Lista de Presentes - Americanas</a>
-				</br>
-				<a href="http://ricardoeletro.com.br" target="_blank">Lista de Presentes - Ricardo Eletro</a></br>
+				<a href="http://casamento.pontofrio.com.br/#/lista-presentes/604655" target="_blank">Lista de Presentes - Ponto Frio</a>
 			</div>
 			<div id="lojas-fisicas">
 				<img src="_imagens/caixa2.png"/>

@@ -12,10 +12,10 @@
  $_CV['registraAuto'] = true;       // Registra as visitas automaticamente?
  $_CV['conectaMySQL'] = true;       // Abre uma conexão com o servidor MySQL?
  $_CV['iniciaSessao'] = true;       // Inicia a sessão com um session_start()?
- $_CV['servidor'] = '127.0.0.1';    // Servidor MySQL
- $_CV['usuario'] = 'root';          // Usuário MySQL
- $_CV['senha'] = '';                // Senha MySQL
- $_CV['banco'] = 'casamento';       // Banco de dados MySQL
+ $_CV['servidor'] = 'mysql.weblink.com.br';    // Servidor MySQL
+ $_CV['usuario'] = 'u348797896_fdias';          // UsuÃ¡rio MySQL
+ $_CV['senha'] = '130392';                // Senha MySQL
+ $_CV['banco'] = 'u348797896_casam';       // Banco de dados MySQL
  $_CV['tabela'] = 'visitas';        // Nome da tabela onde os dados são salvos
  // ==============================
  // ======================================
@@ -119,7 +119,7 @@
 		
 		<nav id="menu" class="posicao-menu">
 			<ul>
-				<li><a href="home.php">Home</a></li>
+				<li><a href="http://leticiaebreno.com">Home</a></li>
 				<li><a href="presenca.php">Confirmação de Presença</a></li>
 				<li><a href="presentes.php">Lista de Presentes</a></li>
 				<li><a href="mensagens.php">Mural de Mensagens</a></li>
@@ -139,7 +139,7 @@
 		</figure>
 		
 		<div id="texto-principal">
-			<h2>Faça parte da nossa história de amor, confirme sua presença.</h2>
+			<h2>Faça parte da nossa história de amor. Confirme sua presença até o dia 31/05/17.</h2>
 		</div>
 		
 			<form id="confirmacao" method="post" action="_php/confirma.php" onsubmit="confirmarPresenca()">
@@ -152,7 +152,7 @@
 					<p><label name="tNaoLabel" id="cNaoLabel" for="cNao">Não</label><input type="radio" name="tResposta" value="Nao" id="cNao"/></p>
 				</fieldset>
 				<p><label name="tQntLabel" id="cQntLabel" for="cQnt">Quantos adultos? (a partir de 11 anos) </label><input type="number" name="tQnt" id="cQnt" min="1" max="10" value="1"/></label></p></p>
-				<input type="text" id="email" name="email" placeholder="E-mail" required/>
+				<input type="text" id="email" name="email" placeholder="E-mail"/>
 				<input type="text" id="telefone" name="telefone" placeholder="Telefone" class="telefone" required/>
 				<!--<textarea cols="59" rows="10" id="cAcompanhantes" name="tAcompanhantes" placeholder="Nome dos Acompanhantes"></textarea></br>-->
 				</fieldset>
