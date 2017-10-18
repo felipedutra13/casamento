@@ -134,7 +134,7 @@
 
 			<h2>O dia mais esperado das nossas vidas está chegando e tem sido um prazer compartilhar nossas emoções com vocês!</h2>
 
-			<p>Como muitos de vocês sabem, a contagem regressiva começou a cerca de 9 anos atrás! E agora, o grande dia está chegando!</p>
+			<p>Como muitos de vocês sabem, a contagem regressiva começou há cerca de 9 anos atrás! E agora, o grande dia está chegando!</p>
 			<p>Criamos esse site para compartilhar com vocês os detalhes da organização do nosso casamento.</p>
 			<p>Somos muito gratos a Deus pela oportunidade de poder compartilhar com vocês a nossa felicidade!</p>
 			<p>Não esqueça de confirmar sua presença!</p>

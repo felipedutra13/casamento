@@ -13,7 +13,7 @@ function trocaFoto () {
 	$("#slideshow img:nth-child("+imagemVisible+")").fadeOut(300, function() {
 		$("#pagination li:nth-child("+imagemVisible+") a").removeClass("active");
 		imagemVisible++;
-		if(imagemVisible == 20)
+		if(imagemVisible == 24)
 			imagemVisible = 1;
 		$("#slideshow img:nth-child("+imagemVisible+")").fadeIn(300);
 		$("#pagination li:nth-child("+imagemVisible+") a").addClass("active");

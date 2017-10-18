@@ -8,21 +8,25 @@
 	-webkit-box-shadow:0 3px 5px #999;
 	-moz-box-shadow:0 3px 5px #999;
 	box-shadow:0 3px 5px #999;
-	left: 440px;
-	width: 410px;
-	height: 550px;
+	left: 345px;
+	--width: 410px;
+	width: 600px;
+	--height: 550px; 
+	height: 400px;
 }
 
 #slideshow img {
 	position: absolute;
-	width: 410px;
-	height: 550px;
+	--width: 410px;
+	--height: 550px;
+	width: 100%;
+	height: 100%;
 	
 }
 
 #pagination {
 	clear:both;
-	width:305px;
+	width:325px;
 	margin:25px auto 0;
 	padding:0;
 }

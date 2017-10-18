@@ -145,6 +145,10 @@
 			<div id="lojas-fisicas">
 				<img src="_imagens/caixa2.png"/>
 				<h2>Lojas físicas</h2>
+				<p>Léo Lar - Utilidades domésticas e presentes</br>
+				3441-2155</br>
+				Rua Dr. Custodio Junqueira - Shopping Lac, loja P</br>
+				36700 000 Leopoldina</p>
 			</div>
 		</div>
 	

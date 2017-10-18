@@ -12,10 +12,15 @@
  $_CV['registraAuto'] = true;       // Registra as visitas automaticamente?
  $_CV['conectaMySQL'] = true;       // Abre uma conexão com o servidor MySQL?
  $_CV['iniciaSessao'] = true;       // Inicia a sessão com um session_start()?
- $_CV['servidor'] = 'mysql.weblink.com.br';    // Servidor MySQL
+ /*$_CV['servidor'] = 'mysql.weblink.com.br';    // Servidor MySQL
  $_CV['usuario'] = 'u348797896_fdias';          // UsuÃ¡rio MySQL
  $_CV['senha'] = '130392';                // Senha MySQL
  $_CV['banco'] = 'u348797896_casam';       // Banco de dados MySQL
+ */
+ $_CV['servidor'] = '127.0.0.1';    // Servidor MySQL
+ $_CV['usuario'] = 'root';          // UsuÃ¡rio MySQL
+ $_CV['senha'] = '';                // Senha MySQL
+ $_CV['banco'] = 'games';       // Banco de dados MySQL
  $_CV['tabela'] = 'visitas';        // Nome da tabela onde os dados são salvos
  // ==============================
  // ======================================
@@ -157,6 +162,10 @@
 					<img src="_imagens/foto17.jpg" alt=""/>          
 					<img src="_imagens/foto18.jpg" alt=""/>           
 					<img src="_imagens/foto19.jpg" alt=""/>
+					<img src="_imagens/foto20.jpg" alt=""/>
+					<img src="_imagens/foto21.jpg" alt=""/>
+					<img src="_imagens/foto22.jpg" alt=""/>
+					<img src="_imagens/foto23.jpg" alt=""/>
 				</div>
 				<div>
 					<ul id="pagination">
@@ -179,6 +188,10 @@
 						<li><a href="#slide17">2</a></li>
 						<li><a href="#slide18">3</a></li>
 						<li><a href="#slide19">4</a></li>
+						<li><a href="#slide20">3</a></li>
+						<li><a href="#slide21">4</a></li>
+						<li><a href="#slide22">3</a></li>
+						<li><a href="#slide23">4</a></li>
 					</ul>
 				</div>
 			</div>

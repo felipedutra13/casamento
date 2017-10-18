@@ -152,6 +152,14 @@ figure h1 {
 	font-family: 'Roboto', sans-serif;
 }
 
+#lista-presentes p {
+	font-size: 12pt;
+	text-align: center;
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+	color: rgb(205,110,129);
+}
+
  /* unvisited link */
 a:link {
 	color: rgb(205,110,129);
